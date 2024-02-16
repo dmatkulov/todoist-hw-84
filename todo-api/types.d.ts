@@ -8,8 +8,15 @@ export interface UserFields {
 
 interface UserMethods {
   checkPassword(password: string): Promise<boolean>;
-
+  
   generateToken(): void;
 }
 
 type UserModel = Model<UserFields, unknown, UserMethods>;
+
+export interface TaskFields {
+  user: Types.ObjectId;
+  title: string;
+  description: string;
+  status: 'new' | 'in_progress' | 'complete';
+}
