@@ -15,8 +15,8 @@ interface UserMethods {
 type UserModel = Model<UserFields, unknown, UserMethods>;
 
 export interface TaskFields {
-  user: Types.ObjectId;
+  user: string;
   title: string;
   description: string;
-  status: 'new' | 'in_progress' | 'complete';
+  status: string;
 }

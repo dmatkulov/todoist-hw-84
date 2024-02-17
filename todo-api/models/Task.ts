@@ -1,10 +1,9 @@
 import mongoose, { model, Types } from 'mongoose';
 import User from './User';
-import { TaskFields } from '../types';
 
 const Schema = mongoose.Schema;
 
-const TaskSchema = new Schema<TaskFields>({
+const TaskSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
