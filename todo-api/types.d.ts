@@ -8,7 +8,7 @@ export interface UserFields {
 
 interface UserMethods {
   checkPassword(password: string): Promise<boolean>;
-  
+
   generateToken(): void;
 }
 
