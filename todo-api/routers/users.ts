@@ -4,15 +4,6 @@ import mongoose from 'mongoose';
 
 const usersRouter = Router();
 
-usersRouter.get('/', async (_req, res, next) => {
-  try {
-    const users = await User.find();
-    res.send(users);
-  } catch (e) {
-    next(e);
-  }
-});
-
 usersRouter.post('/', async (req, res, next) => {
   try {
     const user = new User({
